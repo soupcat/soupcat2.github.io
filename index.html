@@ -17,13 +17,15 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Home</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=3916556066"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=339471218" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=3993212903" id="pagesheet"/>
    </head>
  <body>
 
   <div class="clearfix borderbox" id="page"><!-- column -->
-   <div class="colelem" id="u100"><!-- custom html -->
-    <link rel="stylesheet" href="assets/spaceman.css"> 
+   <div class="verticalspacer" data-offset-top="0" data-content-above-spacer="0" data-content-below-spacer="500"></div>
+   <div class="browser_width colelem" id="u100-bw">
+    <div id="u100"><!-- custom html -->
+     <link rel="stylesheet" href="assets/spaceman.css"> 
 
 <div id="star"></div>
     <div id="star2"></div>
@@ -127,8 +129,8 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
         </div>
     </div>
 
+    </div>
    </div>
-   <div class="verticalspacer" data-offset-top="564" data-content-above-spacer="564" data-content-below-spacer="62"></div>
   </div>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -140,6 +142,8 @@ var muse_init=function(){require.config({baseUrl:""});require(["jquery","museuti
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.resizeHeight('.browser_width');/* resize height */
+Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
 Muse.Utils.fullPage('#page');/* 100% height page */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
