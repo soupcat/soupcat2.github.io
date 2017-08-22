@@ -1,0 +1,852 @@
+        /* Niet veel tijd overgehad om het op te kuisen en commentaar te geven. OEPS!*/
+        
+        html {
+            height: 100%;
+            width: 100%;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+        }
+        
+        div {
+            position: absolute;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #star,
+        #star2,
+        #star3 {
+            background-color: white;
+            width: 1px;
+            height: 1px;
+            left: 80%;
+            top: 40%;
+        }
+        
+        #star4,
+        #star5,
+        #star6 {
+            background-color: white;
+            width: 2px;
+            height: 2px;
+            left: 80%;
+            top: 40%;
+        }
+        
+        #star2 {
+            left: 30%;
+            top: 30%;
+        }
+        
+        #star3 {
+            left: 20%;
+            top: 60%;
+        }
+        
+        #star4 {
+            left: 20%;
+            top: 10%;
+        }
+        
+        #star5 {
+            left: 50%;
+            top: 5%;
+        }
+        
+        #star6 {
+            left: 17%;
+            top: 57%;
+        }
+        
+        #planet-floor {
+            bottom: 0;
+            width: 100vw;
+            height: 190px;
+            background-color: #a522c3;
+        }
+        /*<-- Planet -->*/
+        
+        #planetwrap {
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: planetmove 100s infinite linear;
+            transform: scale(3)
+        }
+        
+        @keyframes planetmove {
+            from {
+                left: 80%;
+            }
+            to {
+                left: -10%
+            }
+        }
+        
+        #ring2 {
+            width: 150px;
+            height: 40px;
+            border-radius: 100%;
+            border-top: solid 5px #EA3281;
+            border-right: solid 5px #EA3281;
+            border-left: solid 5px #EA3281;
+            border-bottom: solid 5px #EA3281;
+            transform: rotate(-30deg);
+            top: 25px;
+            left: -30px;
+        }
+        
+        #planet {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to bottom right, #A21190, #730F8E);
+            border-radius: 50%;
+            box-shadow: 0px 0px 50px 1px #c366db;
+        }
+        
+        #ring {
+            width: 150px;
+            height: 40px;
+            border-radius: 100%;
+            border-top: solid 5px transparent;
+            border-right: solid 5px #EA3281;
+            border-left: solid 5px #EA3281;
+            border-bottom: solid 5px #EA3281;
+            transform: rotate(-30deg);
+            top: 25px;
+            left: -30px;
+        }
+        /*<-- Planet End -->*/
+        /*<-- Mountains -->*/
+        
+        #mountain {
+            position: fixed;
+            bottom: 170px;
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 120px solid #8c27a3;
+            animation: mountainmove2 50s -5s linear infinite;
+        }
+        
+        #mountain2,
+        #mountain3 {
+            position: fixed;
+            bottom: 180px;
+            width: 0;
+            height: 0;
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-bottom: 160px solid #8c27a3;
+            animation: mountainmove2 55s linear infinite;
+        }
+        
+        #mountain3 {
+            position: fixed;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #8c27a3;
+            left: 50%;
+            bottom: 120px;
+            animation: mountainmove 15s -1s linear infinite;
+        }
+        
+        #mountain4 {
+            position: fixed;
+            bottom: 150px;
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 80px solid #8c27a3;
+            animation: mountainmove3 30s -100s linear infinite;
+        }
+        
+        #mountain5 {
+            position: fixed;
+            bottom: 10px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #8c27a3;
+            animation: mountainmove2 10s -10s linear infinite;
+        }
+        
+        #mountain6 {
+            position: fixed;
+            bottom: 180px;
+            width: 0;
+            height: 0;
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-bottom: 160px solid #8c27a3;
+            animation: mountainmove2 60s -100s linear infinite;
+        }
+        
+        @keyframes mountainmove3 {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -50%;
+            }
+        }
+        
+        @keyframes mountainmove2 {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -10%;
+            }
+        }
+        
+        @keyframes mountainmove {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -10%;
+            }
+        }
+        /*<-- Mountains End -->*/
+        /*<-- Spaceman -->*/
+        
+        #spaceguy {
+            bottom: 300px;
+            left: 100px;
+            animation: movement 0.4s infinite ease;
+        }
+        
+        @keyframes movement {
+            0% {
+                bottom: 330px;
+            }
+            50% {
+                bottom: 300px;
+            }
+            100% {
+                bottom: 330px;
+            }
+        }
+        
+        #bang {
+            top: 85px;
+            left: 20px;
+            width: 100px;
+            height: 12px;
+            transform-origin: left;
+            animation: bang 10s infinite;
+        }
+        
+        @keyframes bang {
+            0% {
+                transform: rotate(0deg);
+            }
+            31% {
+                transform: rotate(0deg);
+                animation-timing-function: ease-out;
+            }
+            32% {
+                transform: rotate(-50deg);
+                animation-timing-function: ease-in;
+            }
+            34% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        
+        #rightarm {
+            width: 100px;
+            height: 12px;
+            background-color: #FFDBC9;
+            animation: pewpew .4s infinite ease;
+            transform-origin: left;
+        }
+        
+        @keyframes pewpew {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-15deg);
+            }
+            100%% {
+                transform: rotate(0deg;
+                )
+            }
+        }
+        
+        #gun {
+            background-image: url(gun.svg);
+            width: 60px;
+            height: 60px;
+            left: 80px;
+            top: -20px;
+            background-repeat: no-repeat;
+        }
+        
+        #helmet {
+            top: 5px;
+            width: 70px;
+            height: 70px;
+            background-color: #64496A;
+            border-radius: 100%;
+            border-style: solid;
+            border-color: #FF9900;
+            border-width: 2px;
+        }
+        
+        #dot1,
+        #dot2 {
+            width: 10px;
+            height: 10px;
+            background-color: #CB8FCD;
+            border-radius: 100%;
+        }
+        
+        #dot1 {
+            left: 32px;
+            top: 2px;
+        }
+        
+        #dot2 {
+            left: 2px;
+            top: 32px;
+        }
+        
+        #shine {
+            top: 2px;
+            left: 2px;
+            width: 25px;
+            height: 25px;
+            border-top: solid 10px #CB8FCD;
+            border-left: solid 10px #CB8FCD;
+            border-radius: 100% 0% 0% 0%;
+        }
+        
+        #torso {
+            top: 77px;
+            left: 9px;
+            width: 50px;
+            border-bottom: 60px solid #FFE9DE;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+        }
+        
+        #neck,
+        #belt {
+            top: 68px;
+            left: 7px;
+            width: 60px;
+            height: 10px;
+            background-color: #E08600;
+            border-radius: 10px;
+        }
+        
+        #belt {
+            left: 6px;
+            top: 130px;
+            width: 67px;
+        }
+        
+        #butt {
+            left: 10px;
+            top: 140px;
+            border-radius: 0 0 50px 50px;
+            width: 60px;
+            height: 20px;
+            background-color: #FFDBC9;
+        }
+        
+        #leftleg {
+            width: 60px;
+            height: 60px;
+            border-radius: 00% 60px 0px 00%;
+            border-style: solid solid none none;
+            border-color: #FFDBC9;
+            border-width: 10px;
+            left: 35px;
+            top: 145px;
+            transform-origin: top left;
+            transform: rotate(120deg);
+            animation: leg2 0.8s infinite;
+        }
+        
+        #rightleg {
+            width: 120px;
+            height: 60px;
+            border-radius: 0px 0px 0px 00%;
+            border-style: solid none none none;
+            border-color: #e2b6a1;
+            border-width: 10px;
+            left: 50px;
+            top: 145px;
+            transform-origin: top left;
+            transform: rotate(45deg);
+            animation: leg 0.8s infinite;
+        }
+        
+        #foot,
+        #foot2 {
+            border-top-right-radius: 50px;
+            top: 7px;
+            left: 2px;
+            width: 30px;
+            height: 10px;
+            background-color: white;
+            transform-origin: top left;
+        }
+        
+        #footpadthing,
+        #footpadthing2 {
+            top: 55px;
+            left: 57px;
+            width: 16px;
+            height: 7px;
+            border-radius: 50px;
+            background-color: #E08600;
+            animation: foot 0.8s infinite ease;
+        }
+        
+        #footpadthing2 {
+            animation: foot2 0.8s infinite ease;
+        }
+        
+        @keyframes foot {
+            0% {
+                left: 57px;
+                top: 55px;
+                transform: rotate(40deg);
+            }
+            50% {
+                left: 100px;
+                top: -10px;
+                transform: rotate(-90deg);
+            }
+            100% {
+                left: 57px;
+                top: 55px;
+                transform: rotate(40deg);
+            }
+        }
+        
+        @keyframes foot2 {
+            0% {
+                left: 100px;
+                top: -10px;
+                transform: rotate(-90deg);
+            }
+            10% {
+                left: 80px;
+                top: 30px;
+            }
+            50% {
+                left: 57px;
+                top: 55px;
+                transform: rotate(40deg);
+            }
+            100% {
+                left: 100px;
+                top: -10px;
+                transform: rotate(-90deg);
+            }
+        }
+        
+        @keyframes leg2 {
+            0% {
+                left: 35px;
+                width: 60px;
+                transform: rotate(120deg);
+                border-radius: 0px 60px 0px 00%;
+                border-style: solid solid none none;
+            }
+            25% {
+                width: 60px;
+                border-radius: 0px 60px 0px 00%;
+                border-style: solid solid none none;
+            }
+            26% {
+                width: 120px;
+                border-radius: 0px 0px 0px 00%;
+                border-style: solid none none none;
+            }
+            50% {
+                left: 50px;
+                width: 120px;
+                transform: rotate(10deg);
+                border-radius: 0px 0px 0px 00%;
+                border-style: solid none none none;
+            }
+            75% {
+                width: 120px;
+                border-radius: 0px 0px 0px 00%;
+                border-style: solid none none none;
+            }
+            76% {
+                width: 60px;
+                border-radius: 0px 60px 0px 00%;
+                border-style: solid solid none none;
+            }
+            100% {
+                left: 35px;
+                width: 60px;
+                transform: rotate(120deg);
+                border-radius: 0px 60px 0px 00%;
+                border-style: solid solid none none;
+            }
+        }
+        
+        @keyframes leg {
+            /* Dit is een kopie van het andere been maar dan met de rotate inversed. */
+            0% {
+                left: 50px;
+                transform: rotate(10deg);
+                width: 120px;
+                border-radius: 0px 0px 0px 00%;
+                border-style: solid none none none;
+            }
+            25% {
+                width: 120px;
+                border-radius: 0px 0px 0px 00%;
+                border-style: solid none none none;
+            }
+            26% {
+                width: 60px;
+                border-radius: 0px 60px 0px 00%;
+                border-style: solid solid none none;
+            }
+            50% {
+                left: 35px;
+                transform: rotate(120deg);
+                width: 60px;
+                border-radius: 0px 60px 0px 00%;
+                border-style: solid solid none none;
+            }
+            75% {
+                width: 60px;
+                border-radius: 0px 60px 0px 00%;
+                border-style: solid solid none none;
+            }
+            76% {
+                width: 120px;
+                border-radius: 0px 0px 0px 00%;
+                border-style: solid none none none;
+            }
+            100% {
+                left: 50px;
+                transform: rotate(10deg);
+                width: 120px;
+                border-radius: 0px 0px 0px 00%;
+                border-style: solid none none none;
+            }
+        }
+        
+        #armpad {
+            left: 15px;
+            top: 85px;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: #E08600;
+            animation: arm 0.8s infinite ease;
+        }
+        
+        #leftarm {
+            top: 6px;
+            left: 4px;
+            width: 45px;
+            height: 45px;
+            border-radius: 0px 0px 0px 35px;
+            border-style: none none solid solid;
+            border-color: #FFDBC9;
+            border-width: 13px;
+        }
+        
+        #leftwrist {
+            left: 40px;
+            top: 42px;
+            width: 7px;
+            height: 18px;
+            border-radius: 50px;
+            background-color: #E08600;
+        }
+        
+        #lefthand {
+            left: 42px;
+            top: 42px;
+            width: 16px;
+            height: 16px;
+            border-radius: 40px;
+            background-color: white;
+        }
+        
+        @keyframes arm {
+            0% {
+                transform: rotate(-90deg);
+            }
+            50% {
+                transform: rotate(120deg);
+            }
+            100% {
+                transform: rotate(-90deg);
+            }
+        }
+        /*<-- Spaceman End -->*/
+        
+        #bullet {
+            position: fixed;
+            animation: bullet 10s infinite;
+            box-shadow: 0px 0px 20px 8px #c366db;
+            bottom: 10px;
+            right: -60px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        
+        @keyframes bullet {
+            0% {
+                transform: scale(0);
+                left: 130%;
+            }
+            31% {
+                transform: scale(1);
+                left: 130%;
+            }
+            32% {
+                left: 8000%;
+            }
+            33% {
+                left: 8000%;
+            }
+            100% {
+                left: 8000%;
+            }
+        }
+        /*<-- Little Monster Start-->*/
+        
+        #groen {
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-color: #a8e14b;
+            box-shadow: inset -10px -10px #85c421;
+            transform: translate(-50%, -50%);
+            animation: bounce 1s infinite linear;
+        }
+        
+        #eye1 {
+            left: 20px;
+            top: 25px;
+            width: 6px;
+            height: 9px;
+            background-color: black;
+            border-radius: 100%;
+            transform: rotate(10deg);
+        }
+        
+        #eye2 {
+            left: 8px;
+            top: 25px;
+            width: 6px;
+            height: 9px;
+            background-color: black;
+            border-radius: 100%;
+            transform: rotate(15deg);
+        }
+        
+        #dissapear {
+            position: fixed;
+            height: 100vh;
+            bottom: 50px;
+            animation: dissapear 10s infinite linear;
+        }
+        
+        #monsters {
+            position: absolute;
+            animation: forward 10s infinite linear;
+        }
+        
+        #explosion,
+        #explosion2,
+        #explosion3,
+        #explosion4,
+        #explosion5,
+        #explosion6,
+        #explosion7,
+        #explosion8 {
+            width: 15px;
+            height: 15px;
+            animation: explosion 10s infinite cubic-bezier(0, 0, 0, 1);
+        }
+        
+        #particle,
+        #particle2,
+        #particle3,
+        #particle4,
+        #particle5,
+        #particle6,
+        #particle7,
+        #particle8 {
+            border-radius: 100%;
+            width: 15px;
+            height: 15px;
+            background-color: #a8e14b;
+            animation: particle 10s infinite linear;
+        }
+        
+        #rotate,
+        #rotate2,
+        #rotate3,
+        #rotate4,
+        #rotate5,
+        #rotate6,
+        #rotate7,
+        #rotate8 {
+            left: 74%;
+            top: 42%;
+            width: 15px;
+            height: 80px;
+            transform-origin: bottom;
+            animation: dissapear2 10s infinite linear;
+            visibility: hidden;
+        }
+        
+        #rotate2 {
+            transform: rotate(45deg);
+        }
+        
+        #rotate3 {
+            transform: rotate(90deg);
+        }
+        
+        #rotate4 {
+            transform: rotate(135deg);
+        }
+        
+        #rotate5 {
+            transform: rotate(180deg);
+        }
+        
+        #rotate6 {
+            transform: rotate(225deg);
+        }
+        
+        #rotate7 {
+            transform: rotate(270deg);
+        }
+        
+        #rotate8 {
+            transform: rotate(315deg);
+        }
+        
+        @keyframes dissapear2 {
+            0% {
+                visibility: hidden;
+            }
+            32% {
+                visibility: hidden;
+            }
+            33% {
+                visibility: visible;
+            }
+            100% {
+                visibility: visible;
+            }
+        }
+        
+        @keyframes explosion {
+            0% {
+                top: 100%;
+            }
+            32% {
+                top: 100%;
+            }
+            36% {
+                top: 0%;
+            }
+            100% {
+                top: 0%;
+            }
+        }
+        
+        @keyframes particle {
+            0% {
+                transform: scale(1);
+            }
+            32% {
+                transform: scale(1);
+            }
+            36% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0% {
+                height: 60px;
+                top: 100%;
+                animation-timing-function: cubic-bezier(0, 0, 0, 1);
+            }
+            10% {
+                /* <-- Hier heb ik de width aangepast zodat er een "squash en stretch" gebeurt bij het omhoog gaan. Ik heb de "top" value hier weg gelaten omdat dit anders de timing-function zou influeren, wat ik niet wil. Een andere optie is om de width-animatie te nesten in een child, maar dit zou veel meer extra tijd kosten. -->  */
+                width: 80px;
+                height: 100px;
+            }
+            50% {
+                height: 100px;
+                top: 50%;
+                animation-timing-function: cubic-bezier(1, 0, 1, 1);
+            }
+            90% {
+                height: 60px;
+                top: 100%;
+                width: 100px;
+            }
+            100% {
+                width: 120px;
+                height: 50px;
+                top: 100%;
+            }
+        }
+        
+        @keyframes forward {
+            0% {
+                right: -10%;
+            }
+            100% {
+                right: 100%;
+            }
+        }
+        
+        @keyframes dissapear {
+            0% {
+                visibility: visible;
+            }
+            31% {
+                visibility: visible
+            }
+            32% {
+                visibility: hidden;
+            }
+            100% {
+                visibility: hidden
+            }
+        }
+        /*<-- Little Monster End-->*/
