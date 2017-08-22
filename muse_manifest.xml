@@ -1,7 +1,7 @@
-<manifest alg="2" build="2015.2.1.352" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="soupcat.com" resolutions="1x" timestamp="1503420308701">
+<manifest alg="2" build="2015.2.1.352" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="soupcat.com" resolutions="1x" timestamp="1503422301876">
   <folder name="css">
     <file name="site_global.css" crc="3916556066"/>
-    <file name="index.css" crc="3993212903" ref="index"/>
+    <file name="index.css" crc="1166428" ref="index"/>
   </folder>
   <folder name="assets">
     <file name="spaceman.css" crc="394133770" seo="true" mt="1494185962000"/>
@@ -14,5 +14,5 @@
     <file name="jquery.watch.js" crc="3842844514" ref="index"/>
     <file name="require.js" crc="4108833657" ref="index"/>
   </folder>
-  <file name="index.html" crc="86901777" seo="true" mt="1503420299484" redirect="true"/>
+  <file name="index.html" crc="4103506170" seo="true" mt="1503422297601" redirect="true"/>
 </manifest>
